@@ -1,0 +1,16 @@
+export const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+export const AUTH_URL = "/api/auth"
+export const COURSE_URL = "/api/courses"
+export const SECTION_URL = "/api/sections"
+export const PROGRESS_URL = "/api/progress"
+export const PAYMENT_URL = "/api/checkout"
+export const QNA_URL = "/api/qna"
+export const NOTES_URL = "/api/video-notes";
+export const PROFILE_URL = "/api/profile";
+export const PERFORMANCE_URL = "/api/performance"
+export const ANNOUNCEMENT_URL = "/api/announcement"
+export const STUDENT_URL = "/api/instructor/students"
+export const REVIEW_URL = "/api/review"
+export const FAVORITE_URL = "/api/favorites"
+export const LECTURE_QUESTION_URL = "/api/lectureQuestions"
+export const SESSION_URL = "/api/sessions"

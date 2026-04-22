@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.newzlearn.id.vn
+
+# Sitemaps
+Sitemap: https://www.newzlearn.id.vn/sitemap.xml

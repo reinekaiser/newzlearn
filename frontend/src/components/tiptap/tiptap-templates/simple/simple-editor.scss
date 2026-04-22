@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  --tt-toolbar-height: 44px;
+  --tt-theme-text: var(--tt-gray-light-900);
+
+  .dark & {
+    --tt-theme-text: var(--tt-gray-dark-900);
+  }
+
+  font-family: "Inter", sans-serif;
+  color: var(--tt-theme-text);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  overscroll-behavior-y: none;
+}
+
+html,
+body,
+#root,
+#app {
+  height: 100%;
+  background-color: var(--tt-bg-color);
+  overscroll-behavior-x: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--tt-scrollbar-color) transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--tt-scrollbar-color);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ----- Editor Layout ----- */
+
+.tiptap.ProseMirror {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Wrapper chiếm toàn bộ chiều ngang component cha */
+.simple-editor-wrapper {
+  width: 100%;
+  height: 100%;
+  border: 1px solid oklch(87.2% 0.01 258.338);
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+
+  /* Khi editor bên trong được focus */
+  &:focus-within {
+    border-color: #098be4;
+  }
+}
+/* Thanh toolbar nằm trên */
+.simple-editor-toolbar {
+  width: 100%;
+  height: var(--tt-toolbar-height);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-bottom: 1px solid oklch(87.2% 0.01 258.338) !important;
+  flex-shrink: 0;
+  background-color: #252525;
+}
+
+/* Vùng soạn thảo có scroll riêng */
+.simple-editor-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  color: #000000;
+
+  .tiptap.ProseMirror {
+    min-height: 100%;
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .simple-editor-content {
+    padding: 1rem;
+  }
+}

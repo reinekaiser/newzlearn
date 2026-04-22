@@ -1,0 +1,4 @@
+# Core dependencies
+openai-whisper==20231117
+boto3==1.34.19
+requests==2.31.0
